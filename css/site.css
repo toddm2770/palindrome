@@ -96,3 +96,17 @@ footer i{
 footer i:hover{
     color: var(--cf-theme-200)
 }
+
+.isPal{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--tm-green-900);
+    background-color: var(--tm-green-200);
+}
+
+.notPal{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--tm-red-900);
+    background-color: var(--tm-red-200);
+}
