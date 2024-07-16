@@ -23,9 +23,9 @@ function reverse(message) {
 
 // Check if the message is a palindrome
 function checkForPalindrome(message, reverseMessage) {
-    let lowercaseMessage = message.toLowerCase().replace(/\s/g, '');
+    let formattedMessage = message.toLowerCase().replace(/\s/g, '');
     let reversedMessage = reverseMessage.toLowerCase().replace(/\s/g, '');
-    if (lowercaseMessage == reversedMessage) {
+    if (formattedMessage == reversedMessage) {
         return true;
     } else {
         return false;
