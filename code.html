@@ -121,9 +121,9 @@
                         let message = "";
 
                         if (checkPalindrome) {
-                            message += `&ltdiv class = isPal border border-bottom&gt&ltstrong&gtWell done! You entered a Palindrome!&lt/strong&gt&lt/div&gt&ltdiv&gt class = isPal>Your phrase reversed is: &ltstrong&gt${reverseMessage}&lt/strong&gt&lt/div&gt`;
+                            message += `<xmp><div class = isPal border border-bottom><strong>Well done! You entered a Palindrome!</strong></div><div class = isPal>Your phrase reversed is: <strong>${reverseMessage}</strong></div></xmp>`;
                         } else {
-                            message += `&ltdiv class = notPal&gt&ltstrong&gtSorry! You did not enter a Palindrome!&lt/strong&gt&lt/div&gt&ltdiv&gt class = notPal&gtYour phrase reversed is: &ltstrong&gt${reverseMessage}&lt/strong&gt&lt/div&gt`;
+                            message += `<xmp><div class = notPal><strong>Sorry! You did not enter a Palindrome!</strong></div><div class = notPal>Your phrase reversed is: <strong>${reverseMessage}</strong></div></xmp>`;
                         }
                         
                         return message;
