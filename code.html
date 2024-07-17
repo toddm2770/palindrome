@@ -80,20 +80,80 @@
               <div class="col-12 col-lg-8">
                 <pre class="line-numbers">
                   <code class="language-javascript">
-                    //get values from the screen and display them
-                    function getValues2(){
-                    let inputMessage = document.getElementById("message").value;
-                    let alertMessage = document.getElementById("alertMessage");
-                    alertMessage.innerText = inputMessage;
+                    // Get values from the screen and display them
+                    function getValues() {
+                        let inputMessage = document.getElementById("message").value;
+                        let alertMessage = document.getElementById("alertMessage");
 
-}
+                        let reverseMessage = reverse(inputMessage);
+
+                        let checkPalindrome = checkForPalindrome(inputMessage, reverseMessage);
+
+                        alertMessage.innerHTML = displayMessage(inputMessage, reverseMessage, checkPalindrome);
+                    }
+
+                    // Return the message in reverse
+                    function reverse(message) {
+                        let reverseMessage = "";
+
+                        for (let index = message.length - 1; index >= 0; index--) {
+                            reverseMessage += message[index];
+                        }
+
+                        return reverseMessage;
+                    }
+
+                    // Check if the message is a palindrome
+                    function checkForPalindrome(message, reverseMessage) {
+                        let formattedMessage = message.toLowerCase().replace(/\s/g, '');
+                        let reversedMessage = reverseMessage.toLowerCase().replace(/\s/g, '');
+                        if (formattedMessage == reversedMessage) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+
+
+                    // Display message and reversed message
+                    function displayMessage(inputMessage, reverseMessage, checkPalindrome) {
+
+                        let message = "";
+
+                        if (checkPalindrome) {
+                            message += `<div class = isPal border border-bottom><strong>Well done! You entered a Palindrome!</strong></div><div class = isPal>Your phrase reversed is: <strong>${reverseMessage}</strong></div>`;
+                        } else {
+                            message += `<div class = notPal><strong>Sorry! You did not enter a Palindrome!</strong></div><div class = notPal>Your phrase reversed is: <strong>${reverseMessage}</strong></div>`;
+                        }
+                        
+                        return message;
+                    }
                   </code>
                 </pre>
               </div>
               <div class="col-12 col-lg-4">
-                <p>the code is structured in one function</p>
-                <h5>getValues2</h5>
-                <p>Displays the user entered message</p>
+                <h4>This code is structured into four functions</h4>
+                <h5>getValues</h5>
+                <p>When this function is triggered by the "Try Me!" button it gathers from the HTML element with the id "message".
+                  After retrieving the input value it then calculates it's reverse by using the "reverse" function. Then it checks
+                  if the original message is palindrome using the checkForPalindrom function. Finally, it pushes the result to the
+                  HTML element with the id "alertMessage".
+                </p>
+                <h5>reverse</h5>
+                <p>This function takes the string which was input above to the HTML element with the id "message" and reverses it
+                  by iterating through the characters of the string from end to beginning.
+                </p>
+                <h5>checkForPalindrome</h5>
+                <p>This function first removes spaces and converts both the message and reverseMessage to lowercase. It then compares
+                  if the newly formatted message and reverseMessage are equivalent. If they are it returns "true" otherwise it returns
+                  "false".
+                </p>
+                <h5>displayMessage</h5>
+                <p>This function constructs and retrurns an HTML-formatted message based on whether or not the input message is a palindrome.
+                  If checkPalindrome is "true" it generates a message to the user stating the word is in fact a palindrome and displays the
+                  word in reverse. If checkPalindrome is "false" it generates a message to the user stating the word is not in fact a palindrome
+                  and also shows the word in reverse.
+                </p>
               </div>
             </div>
         </div>

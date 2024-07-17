@@ -35,7 +35,6 @@ function checkForPalindrome(message, reverseMessage) {
 
 // Display message and reversed message
 function displayMessage(inputMessage, reverseMessage, checkPalindrome) {
-    // Remove the d-none class from the alert.
 
     let message = "";
 
