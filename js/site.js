@@ -33,7 +33,7 @@ function checkForPalindrome(message, reverseMessage) {
 }
 
 
-// Display message and reversed message
+// Display message, reversed message, and palindrome message
 function displayMessage(inputMessage, reverseMessage, checkPalindrome) {
 
     let message = "";
