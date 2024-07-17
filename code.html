@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>APP Name Coding Challenge by Todd Myers</title>
+    <title>Sagas Coding Challenge by Todd Myers</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,7 +45,7 @@
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">
                 <img src="/img/logos/MyLogoLightSm.png" width="40" class="d-inline-block align-text-top">
-                APP NAME
+                Sagas
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -121,9 +121,9 @@
                         let message = "";
 
                         if (checkPalindrome) {
-                            message += `<div class = isPal border border-bottom><strong>Well done! You entered a Palindrome!</strong></div><div class = isPal>Your phrase reversed is: <strong>${reverseMessage}</strong></div>`;
+                            message += `&ltdiv class = isPal border border-bottom&gt&ltstrong&gtWell done! You entered a Palindrome!&lt/strong&gt&lt/div&gt&ltdiv&gt class = isPal>Your phrase reversed is: &ltstrong&gt${reverseMessage}&lt/strong&gt&lt/div&gt`;
                         } else {
-                            message += `<div class = notPal><strong>Sorry! You did not enter a Palindrome!</strong></div><div class = notPal>Your phrase reversed is: <strong>${reverseMessage}</strong></div>`;
+                            message += `&ltdiv class = notPal&gt&ltstrong&gtSorry! You did not enter a Palindrome!&lt/strong&gt&lt/div&gt&ltdiv&gt class = notPal&gtYour phrase reversed is: &ltstrong&gt${reverseMessage}&lt/strong&gt&lt/div&gt`;
                         }
                         
                         return message;
@@ -134,9 +134,9 @@
               <div class="col-12 col-lg-4">
                 <h4>This code is structured into four functions</h4>
                 <h5>getValues</h5>
-                <p>When this function is triggered by the "Try Me!" button it gathers from the HTML element with the id "message".
+                <p>When this function is triggered by the "Try Me!" button it gathers input from the HTML element with the id "message".
                   After retrieving the input value it then calculates it's reverse by using the "reverse" function. Then it checks
-                  if the original message is palindrome using the checkForPalindrom function. Finally, it pushes the result to the
+                  if the original message is a palindrome using the checkForPalindrom function. Finally, it pushes the result to the
                   HTML element with the id "alertMessage".
                 </p>
                 <h5>reverse</h5>
